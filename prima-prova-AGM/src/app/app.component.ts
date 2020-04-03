@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
     title = 'server mappe';
     //Aggiungiamo latitudine e longitudine di un luogo
-    lat: number = 45.506738;
-    lng: number = 9.190766;
+    latScuola: number = 45.506738;
+    lngScuola: number = 9.190766;
+
+    latCasa: number = 45.155322;
+    lngCasa: number = 8.946391;
+
 }

@@ -1,7 +1,10 @@
 {{title}}
 <!--Centriamo la mappa alle nostre coordinate-->
-<agm-map [latitude]="lat" [longitude]="lng">
+<agm-map [latitude]="latScuola" [longitude]="lngScuola">
 	<!--Mettiamo un marker alle nostre coordinate-->
-	<agm-marker [latitude]="lat" [longitude]="lng">
+	<agm-marker [latitude]="latScuola" [longitude]="lngScuola">
+	</agm-marker>
+
+    <agm-marker [latitude]="latCasa" [longitude]="lngCasa">
 	</agm-marker>
 </agm-map>
