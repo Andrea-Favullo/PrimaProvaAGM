@@ -14,4 +14,12 @@ export class AppComponent {
     latCasa: number = 45.155322;
     lngCasa: number = 8.946391;
 
+    coloreCerchi = 'green';
+
+    colora(colore: string): boolean{
+        
+        this.coloreCerchi = colore;
+        
+        return false;
+    }
 }

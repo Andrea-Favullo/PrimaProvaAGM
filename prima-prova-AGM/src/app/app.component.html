@@ -1,10 +1,21 @@
 {{title}}
+
+<button (click)="colora('red')">Rosso</button>
+<button (click)="colora('yellow')">Giallo</button>
+<button (click)="colora('blue')">Blu</button>
+
 <!--Centriamo la mappa alle nostre coordinate-->
 <agm-map [latitude]="latScuola" [longitude]="lngScuola">
 	<!--Mettiamo un marker alle nostre coordinate-->
 	<agm-marker [latitude]="latScuola" [longitude]="lngScuola">
 	</agm-marker>
 
+    <agm-circle [latitude]="latScuola" [longitude]="lngScuola" [radius]="5000" [fillColor]="coloreCerchi"></agm-circle>
+
     <agm-marker [latitude]="latCasa" [longitude]="lngCasa">
+
+    <agm-circle [latitude]="latCasa" [longitude]="lngCasa" [radius]="5000" [fillColor]="coloreCerchi"></agm-circle>
+
+
 	</agm-marker>
 </agm-map>
