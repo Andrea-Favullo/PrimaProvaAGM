@@ -1,20 +1,31 @@
 {{title}}
 
+<h3>Cambia colore dei cerchi:</h3>
+
 <button (click)="colora('red')">Rosso</button>
 <button (click)="colora('yellow')">Giallo</button>
 <button (click)="colora('blue')">Blu</button>
+
+<h3>Cambia colore del rettangolo:</h3>
+
+<button (click)="coloraR('red')">Rosso</button>
+<button (click)="coloraR('yellow')">Giallo</button>
+<button (click)="coloraR('blue')">Blu</button>
 
 <!--Centriamo la mappa alle nostre coordinate-->
 <agm-map [latitude]="latScuola" [longitude]="lngScuola">
 
 	<!--Mettiamo un marker alle nostre coordinate-->
 	<agm-marker [latitude]="latScuola" [longitude]="lngScuola" [iconUrl]="icon"></agm-marker>
-    <agm-marker [latitude]="46" [longitude]="9" [iconUrl]="icon1"></agm-marker>
-    <agm-marker [latitude]="45" [longitude]="9" [iconUrl]="icon2"></agm-marker>
-    <agm-marker [latitude]="45" [longitude]="10" [iconUrl]="icon3"></agm-marker>
-    <agm-circle [latitude]="latScuola" [longitude]="lngScuola" [radius]="5000" [fillColor]="coloreCerchi"></agm-circle>
+	<agm-marker [latitude]="46" [longitude]="9" [iconUrl]="icon1"></agm-marker>
+	<agm-marker [latitude]="45" [longitude]="9" [iconUrl]="icon2"></agm-marker>
+	<agm-marker [latitude]="45" [longitude]="10" [iconUrl]="icon3"></agm-marker>
+	<agm-circle [latitude]="latScuola" [longitude]="lngScuola" [radius]="5000" [fillColor]="coloreCerchi"></agm-circle>
 
-    <agm-marker [latitude]="latCasa" [longitude]="lngCasa"></agm-marker>
-    <agm-circle [latitude]="latCasa" [longitude]="lngCasa" [radius]="5000" [fillColor]="coloreCerchi"></agm-circle>
+	<agm-marker [latitude]="latCasa" [longitude]="lngCasa"></agm-marker>
+	<agm-circle [latitude]="latCasa" [longitude]="lngCasa" [radius]="5000" [fillColor]="coloreCerchi"></agm-circle>
+
+	<agm-polygon [paths]="triangle" [fillColor]="'red'"></agm-polygon>
+    <agm-polygon [paths]="rectangle" [fillColor]="coloreRettangolo"></agm-polygon>
 
 </agm-map>
