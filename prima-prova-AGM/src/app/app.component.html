@@ -6,16 +6,15 @@
 
 <!--Centriamo la mappa alle nostre coordinate-->
 <agm-map [latitude]="latScuola" [longitude]="lngScuola">
-	<!--Mettiamo un marker alle nostre coordinate-->
-	<agm-marker [latitude]="latScuola" [longitude]="lngScuola">
-	</agm-marker>
 
+	<!--Mettiamo un marker alle nostre coordinate-->
+	<agm-marker [latitude]="latScuola" [longitude]="lngScuola" [iconUrl]="icon"></agm-marker>
+    <agm-marker [latitude]="46" [longitude]="9" [iconUrl]="icon1"></agm-marker>
+    <agm-marker [latitude]="45" [longitude]="9" [iconUrl]="icon2"></agm-marker>
+    <agm-marker [latitude]="45" [longitude]="10" [iconUrl]="icon3"></agm-marker>
     <agm-circle [latitude]="latScuola" [longitude]="lngScuola" [radius]="5000" [fillColor]="coloreCerchi"></agm-circle>
 
-    <agm-marker [latitude]="latCasa" [longitude]="lngCasa">
-
+    <agm-marker [latitude]="latCasa" [longitude]="lngCasa"></agm-marker>
     <agm-circle [latitude]="latCasa" [longitude]="lngCasa" [radius]="5000" [fillColor]="coloreCerchi"></agm-circle>
 
-
-	</agm-marker>
 </agm-map>
